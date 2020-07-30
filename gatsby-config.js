@@ -58,6 +58,16 @@ module.exports = {
                     }
                 ]
             }
+        },
+        {
+            resolve: "gatsby-plugin-gdpr-cookies",
+            options: {
+                googleAnalytics: {
+                    trackingId: "UA-174042619-1",
+                    anonymize: true
+                },
+                environments: ["production", "development"]
+            }
         }
     ]
 };

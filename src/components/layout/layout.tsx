@@ -1,6 +1,7 @@
 import React, {ReactElement, ReactNode} from "react";
 import Footer from "../footer/footer";
 import Header from "../header/header";
+import CookieConsent from "react-cookie-consent";
 
 import styles from "./layout.module.scss";
 import Navbar from "../navbar/navbar";
@@ -26,6 +27,17 @@ const Layout = ({children}: Props): ReactElement => {
                 <main>{children}</main>
             </div>
             <Footer />
+            <CookieConsent
+                location="bottom"
+                buttonText="Sunt de acord"
+                cookieName="gatsby-gdpr-google-analytics"
+                style={{background: "#c5d0dd"}}
+                contentStyle={{color: "#2c394a", fontSize: "13px"}}
+                buttonStyle={{background: "#2c394a", color: "#dcdcdd"}}
+                buttonClasses={styles.cookieAcceptButton}>
+                Acest website folosește cookie-uri pentru a furniza vizitatorilor o experiență de
+                navigare mai buna.
+            </CookieConsent>
         </div>
     );
 };

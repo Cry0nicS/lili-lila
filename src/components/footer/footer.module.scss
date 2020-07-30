@@ -27,3 +27,9 @@
 .icons {
     width: 100px;
 }
+
+.copyright {
+    span:not(:last-child) {
+        padding-right: 5px;
+    }
+}
