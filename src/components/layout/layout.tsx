@@ -1,11 +1,10 @@
 import React, {ReactElement, ReactNode} from "react";
 import Footer from "../footer/footer";
-import Header from "../header/header";
 import CookieConsent from "react-cookie-consent";
-
-import styles from "./layout.module.scss";
 import Navbar from "../navbar/navbar";
 import Sidebar from "../sidebar/sidebar";
+
+import styles from "./layout.module.scss";
 
 interface Props {
     children: ReactNode;
@@ -23,7 +22,6 @@ const Layout = ({children}: Props): ReactElement => {
             <div className={styles.content}>
                 <Navbar toggleSidebar={toggleSidebar} />
                 <Sidebar isSidebarVisible={isSidebarVisible} toggleSidebar={toggleSidebar} />
-                <Header />
                 <main>{children}</main>
             </div>
             <Footer />

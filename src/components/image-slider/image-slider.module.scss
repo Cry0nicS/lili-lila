@@ -6,6 +6,10 @@
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+
+    :global {
+        animation: fade-in 2s ease-in-out 1 forwards;
+    }
 }
 
 .overlay {
@@ -24,5 +28,38 @@
         }
 
         text-align: center;
+    }
+}
+
+.prev-image,
+.next-image {
+    position: absolute;
+    background: none;
+    color: rgba($white, 0.5);
+    border: transparent;
+    cursor: pointer;
+    transition: 0.3s linear;
+    font-size: $size-huge;
+
+    @media screen and (min-width: 992px) {
+        font-size: 4.5rem;
+    }
+}
+
+.prev-image {
+    left: 0;
+}
+
+.next-image {
+    right: 0;
+}
+
+@keyframes :global(fade-in) {
+    0% {
+        opacity: 0.2;
+    }
+
+    100% {
+        opacity: 1;
     }
 }
