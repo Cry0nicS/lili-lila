@@ -1,0 +1,9 @@
+@mixin delayChildren($totalChildren, $gap: 0.25) {
+    @for $i from 1 to $totalChildren + 1 {
+        $delay: $i * $gap;
+
+        &:nth-child(#{$i}) {
+            animation-delay: #{$delay}s;
+        }
+    }
+}

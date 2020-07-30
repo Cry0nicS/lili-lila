@@ -1,0 +1,23 @@
+@import "../../styles/settings";
+@import "../../styles/helpers";
+@import "../../styles/fonts";
+
+.section {
+    position: relative;
+    text-align: center;
+    background: $background;
+}
+
+.content {
+    @include helper-center(true, true);
+}
+
+.title {
+    @include font-heading($size-large);
+
+    padding: 10px 0;
+}
+
+.description {
+    @include font-regular($size-big);
+}

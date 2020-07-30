@@ -1,0 +1,55 @@
+@import "src/styles/settings";
+@import "src/styles/fonts";
+
+*,
+::after,
+::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    @include font-regular($size-regular);
+
+    margin: 0 auto;
+    color: $text-secondary;
+    background: $white;
+
+    h1 {
+        @include font-heading($size-large);
+    }
+
+    h2 {
+        @include font-heading($size-headings);
+    }
+
+    h3 {
+        @include font-heading($size-big);
+    }
+
+    a,
+    a:active {
+        color: $text-secondary;
+        text-decoration: none;
+
+        &:hover {
+            color: $accent;
+        }
+
+        &.disabled {
+            pointer-events: none;
+            cursor: not-allowed;
+        }
+    }
+
+    ul {
+        list-style-type: none;
+        padding: 0;
+    }
+}
+
+.social-links {
+    display: flex;
+    justify-content: space-between;
+}

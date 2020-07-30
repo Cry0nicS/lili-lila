@@ -1,0 +1,23 @@
+@import "../../styles/settings";
+@import "../../styles/fonts";
+
+.header {
+    height: 60vh;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin-bottom: 20px;
+}
+
+.overlay {
+    display: flex;
+    background-color: rgba(0, 0, 0, 0.4%);
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    color: $white;
+
+    h1 {
+        @include font-heading($size-huge);
+    }
+}

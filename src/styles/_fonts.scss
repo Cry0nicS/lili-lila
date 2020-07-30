@@ -1,0 +1,43 @@
+@import "src/styles/settings";
+
+@mixin text-shorten {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+@mixin font-regular($font-size: $size-regular, $line-height: normal, $letter-spacing: normal) {
+    font-family: $font-primary;
+    font-size: $font-size;
+
+    @if $line-height==normal {
+        line-height: normal;
+    } @else {
+        line-height: $line-height / $font-size;
+    }
+
+    @if $letter-spacing==normal {
+        letter-spacing: normal;
+    } @else {
+        letter-spacing: #{$letter-spacing / $font-size}em;
+    }
+}
+
+@mixin font-heading($font-size: $size-headings, $line-height: normal, $letter-spacing: normal) {
+    font-family: $font-secondary;
+    font-size: $font-size;
+    text-transform: uppercase;
+    font-weight: 700;
+
+    @if $line-height==normal {
+        line-height: normal;
+    } @else {
+        line-height: $line-height / $font-size;
+    }
+
+    @if $letter-spacing==normal {
+        letter-spacing: normal;
+    } @else {
+        letter-spacing: #{$letter-spacing / $font-size}em;
+    }
+}
