@@ -17,8 +17,12 @@
     color: $white;
 
     h1 {
+        @include font-heading($size-headings);
+
         @media screen and (min-width: 768px) {
             @include font-heading($size-huge);
         }
+
+        text-align: center;
     }
 }
