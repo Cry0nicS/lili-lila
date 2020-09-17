@@ -1,9 +1,10 @@
-import React, {ReactElement} from "react";
+import Img from "gatsby-image";
 import PageLinks from "../../constants/page-links";
-import Img, {GatsbyImageProps} from "gatsby-image";
-import {graphql, Link, useStaticQuery} from "gatsby";
-
+import React from "react";
+import type {GatsbyImageFixedProps} from "gatsby-image";
+import type {ReactElement} from "react";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
+import {graphql, Link, useStaticQuery} from "gatsby";
 
 import styles from "./navbar.module.scss";
 
@@ -13,7 +14,7 @@ interface Props {
 
 interface LogoQuery {
     logo: {
-        childImageSharp: GatsbyImageProps;
+        childImageSharp: GatsbyImageFixedProps;
     };
 }
 

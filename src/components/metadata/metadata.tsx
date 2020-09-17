@@ -1,9 +1,9 @@
-import {useLocation} from "@reach/router";
-import {graphql, useStaticQuery} from "gatsby";
-import React, {ReactElement} from "react";
-import {Helmet} from "react-helmet";
-
 import Facebook from "./facebook";
+import React from "react";
+import type {ReactElement} from "react";
+import {graphql, useStaticQuery} from "gatsby";
+import {Helmet} from "react-helmet";
+import {useLocation} from "@reach/router";
 
 interface Props {
     contentType?: string;

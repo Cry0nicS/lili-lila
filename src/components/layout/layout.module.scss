@@ -12,6 +12,15 @@
     flex-grow: 1;
 }
 
-.cookie-accept-button {
-    align-self: center;
+.cookies-info {
+    padding-left: 5px;
+    color: $text-primary;
+
+    &:hover {
+        color: $text-secondary;
+    }
+}
+
+.cookies-hide-info {
+    display: none;
 }

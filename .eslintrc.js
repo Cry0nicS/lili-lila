@@ -6,7 +6,12 @@ const baseConfig = require("@glen-84/eslint-config");
 module.exports = {
     extends: ["react-app", "@glen-84"],
     parserOptions: {
-        project: ["./tsconfig.json", "./tsconfig.eslint.json"]
+        project: ["./tsconfig.json", "./tsconfig.eslint.json"],
+        ecmaVersion: 6,
+        sourceType: "module",
+        ecmaFeatures: {
+            jsx: true
+        }
     },
     rules: {
         // Place to specify ESLint rules.

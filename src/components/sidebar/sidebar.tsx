@@ -1,6 +1,7 @@
-import React, {ReactElement} from "react";
 import PageLinks from "../../constants/page-links";
+import React from "react";
 import SocialLinks from "../../constants/social-links";
+import type {ReactElement} from "react";
 
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 

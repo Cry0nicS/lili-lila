@@ -1,6 +1,7 @@
-import {FontAwesomeIconProps} from "@fortawesome/react-fontawesome";
+import React from "react";
+import type {FontAwesomeIconProps} from "@fortawesome/react-fontawesome";
+import type {ReactElement} from "react";
 import {Link} from "gatsby";
-import React, {ReactElement} from "react";
 
 import Layout from "../components/layout/layout";
 import Metadata from "../components/metadata/metadata";

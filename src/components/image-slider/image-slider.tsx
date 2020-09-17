@@ -1,7 +1,8 @@
 import BackgroundImage from "gatsby-background-image";
-import React, {ReactElement} from "react";
+import React from "react";
+import type {GatsbyImageFluidProps} from "gatsby-image";
+import type {ReactElement} from "react";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
-import {GatsbyImageProps} from "gatsby-image";
 import {graphql, useStaticQuery} from "gatsby";
 
 import styles from "./image-slider.module.scss";
@@ -9,7 +10,7 @@ import styles from "./image-slider.module.scss";
 interface ImageQuery {
     allFile: {
         images: Array<{
-            childImageSharp: GatsbyImageProps;
+            childImageSharp: GatsbyImageFluidProps;
         }>;
     };
 }

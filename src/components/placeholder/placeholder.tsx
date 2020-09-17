@@ -1,5 +1,7 @@
-import {FontAwesomeIcon, FontAwesomeIconProps} from "@fortawesome/react-fontawesome";
-import React, {ReactElement} from "react";
+import React from "react";
+import type {FontAwesomeIconProps} from "@fortawesome/react-fontawesome";
+import type {ReactElement} from "react";
+import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 
 import styles from "./placeholder.module.scss";
 

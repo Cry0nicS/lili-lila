@@ -1,7 +1,8 @@
-import React, {ReactElement} from "react";
+import React from "react";
 import SocialLinks from "../../constants/social-links";
-import {Link} from "gatsby";
+import type {ReactElement} from "react";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
+import {Link} from "gatsby";
 
 import styles from "./footer.module.scss";
 
