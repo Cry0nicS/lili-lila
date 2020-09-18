@@ -33,6 +33,7 @@
         "@glen-84/eslint-config": "3.0.0",
         "@glen-84/prettier-config": "^2.1.1",
         "@glen-84/stylelint-config": "1.1.0",
+        "@hot-loader/react-dom": "^16.13.0",
         "@types/react-helmet": "^6.1.0",
         "@typescript-eslint/eslint-plugin": "4.1.1",
         "@typescript-eslint/parser": "4.1.1",
