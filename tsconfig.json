@@ -11,6 +11,8 @@
         "forceConsistentCasingInFileNames": true, // Disallow inconsistently-cased references to the same file.
         "importHelpers": true,
         "incremental": true, // Enable incremental compilation by reading/writing information from prior compilations to a file on disk
+        "outDir": "dist",
+        "tsBuildInfoFile": ".tsbuildinfo",
         "jsx": "react", // Support JSX in .tsx files
         "module": "esnext", // Specify module code generation
         "moduleResolution": "node", // Resolve modules using Node.js style
