@@ -37,7 +37,7 @@ const Layout = ({children}: Props): ReactElement => {
                 Acest website folosește cookie-uri pentru a furniza vizitatorilor o experiență de
                 navigare mai buna.
                 <Link
-                    to="/tos"
+                    to="/terms-of-service"
                     className={styles.cookiesInfo}
                     activeClassName={styles.cookiesHideInfo}>
                     Detalii

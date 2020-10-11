@@ -5,6 +5,7 @@
     "description": "Lavanda Lili Lila",
     "version": "0.1.0",
     "dependencies": {
+        "@contentful/rich-text-react-renderer": "^14.1.1",
         "@fortawesome/fontawesome-svg-core": "1.2.30",
         "@fortawesome/free-brands-svg-icons": "5.14.0",
         "@fortawesome/free-regular-svg-icons": "5.14.0",
@@ -20,6 +21,7 @@
         "gatsby-plugin-react-helmet": "^3.3.11",
         "gatsby-plugin-sharp": "^2.6.36",
         "gatsby-plugin-typescript": "^2.4.20",
+        "gatsby-source-contentful": "^2.3.51",
         "gatsby-source-filesystem": "^2.3.30",
         "gatsby-transformer-sharp": "^2.5.15",
         "node-sass": "4.14.1",

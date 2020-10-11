@@ -17,7 +17,7 @@ const Footer = (): ReactElement => (
             <span>{new Date().getFullYear()}</span>
         </div>
         <span>
-            <Link to="/tos">Termeni si conditii</Link>
+            <Link to="/terms-of-service">Termeni si conditii</Link>
         </span>
     </footer>
 );

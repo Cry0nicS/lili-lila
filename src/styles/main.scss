@@ -1,14 +1,6 @@
 @import "src/styles/settings";
 @import "src/styles/fonts";
 
-*,
-::after,
-::before {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
 body {
     @include font-regular($size-regular);
 
@@ -42,14 +34,13 @@ body {
             cursor: not-allowed;
         }
     }
-
-    ul {
-        list-style-type: none;
-        padding: 0;
-    }
 }
 
+.page-links,
 .social-links {
+    list-style-type: none;
     display: flex;
     justify-content: space-between;
+    padding: 0;
+    margin: 0;
 }

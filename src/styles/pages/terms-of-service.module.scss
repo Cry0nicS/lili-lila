@@ -1,0 +1,21 @@
+@import "src/styles/settings";
+@import "src/styles/fonts";
+
+.header {
+    padding: 40px 0;
+    text-align: center;
+
+    h3 {
+        font-style: oblique;
+    }
+}
+
+.content {
+    margin: 0 20px;
+    padding: 0 20px;
+    text-align: justify;
+
+    ul {
+        list-style-type: disc;
+    }
+}
