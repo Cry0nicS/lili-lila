@@ -15,13 +15,17 @@ export interface ArticleProps {
     date: string;
     coverPhoto: {fluid: FluidObject};
     description: {description: string};
-    content?: {childContentfulArticleContentRichTextNode: {json: Document}};
+    content: {json: Document};
 }
 
 const ArticleBox = ({...article}: ArticleProps): ReactElement => (
     <Link to={`/blog/${article.slug}`} className={styles.article} key={article.id}>
         <article>
-            <Image className={styles.coverPhoto} fluid={article.coverPhoto.fluid} />
+            <Image
+                className={styles.coverPhoto}
+                fluid={article.coverPhoto.fluid}
+                alt={article.title}
+            />
             <div className={styles.card}>
                 <h2 className={styles.title}>{article.title}</h2>
                 <h3 className={styles.subheader}>{article.subtitle}</h3>

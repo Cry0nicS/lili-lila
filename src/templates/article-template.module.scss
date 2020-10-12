@@ -1,0 +1,22 @@
+@import "src/styles/settings";
+@import "src/styles/fonts";
+
+.template {
+    padding: 20px 0;
+}
+
+.content {
+    text-align: justify;
+}
+
+.article {
+    h1,
+    h3 {
+        text-align: center;
+        text-transform: none;
+    }
+
+    h3 {
+        font-style: italic;
+    }
+}
