@@ -1,0 +1,41 @@
+@import "../../styles/fonts";
+@import "../../styles/helpers";
+
+.article {
+    color: $text-primary;
+    display: block;
+    margin-bottom: 2rem;
+
+    article {
+        height: 100%;
+        display: grid;
+        grid-template-rows: auto 1fr auto;
+    }
+}
+
+.title {
+    text-transform: none;
+    margin: 0;
+    padding: 10px 0 0;
+}
+
+.subheader {
+    text-transform: none;
+    margin: 0;
+    padding: 0 0 10px;
+    font-style: italic;
+}
+
+.description {
+    text-align: justify;
+}
+
+.cover-photo {
+    height: 300px;
+}
+
+.card {
+    margin: 0;
+    padding: 0 20px;
+    background-color: $background;
+}
