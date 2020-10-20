@@ -16,11 +16,13 @@ body {
 
     h2 {
         @include font-heading($size-headings);
+
         margin: 0 0 10px;
     }
 
     h3 {
         @include font-heading($size-big);
+
         margin: 0 0 10px;
     }
 
@@ -40,7 +42,10 @@ body {
     }
 }
 
-.page-links,
+.page-links {
+    list-style-type: none;
+}
+
 .social-links {
     list-style-type: none;
     display: flex;
