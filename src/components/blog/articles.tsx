@@ -2,7 +2,7 @@ import type {ReactElement} from "react";
 import React from "react";
 
 import styles from "./articles.module.scss";
-import Title from "../Utilities/page-title";
+import Title from "../utilities/page-title";
 import ArticleBox from "./article-box";
 
 import type {ArticleProps} from "./article-box";
