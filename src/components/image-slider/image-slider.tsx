@@ -1,6 +1,6 @@
 import BackgroundImage from "gatsby-background-image";
 import React from "react";
-import type {GatsbyImageFluidProps} from "gatsby-image";
+import type {FluidObject} from "gatsby-image";
 import type {ReactElement} from "react";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {graphql, useStaticQuery} from "gatsby";
@@ -8,21 +8,22 @@ import {graphql, useStaticQuery} from "gatsby";
 import styles from "./image-slider.module.scss";
 
 interface ImageQuery {
-    allFile: {
-        images: Array<{
-            childImageSharp: GatsbyImageFluidProps;
+    data: {
+        nodes: Array<{
+            image: {
+                fluid: FluidObject;
+            };
         }>;
     };
 }
 
 const getImages = graphql`
     {
-        allFile(filter: {relativeDirectory: {eq: "image-slider"}}, sort: {fields: id, order: ASC}) {
-            images: nodes {
-                childImageSharp {
+        data: allContentfulWallpaper(sort: {order: DESC, fields: createdAt}, limit: 5) {
+            nodes {
+                image {
                     fluid(maxWidth: 1920, quality: 80) {
-                        ...GatsbyImageSharpFluid
-                        ...GatsbyImageSharpFluidLimitPresentationSize
+                        ...GatsbyContentfulFluid
                     }
                 }
             }
@@ -32,10 +33,10 @@ const getImages = graphql`
 
 const ImageSlider = (): ReactElement => {
     const {
-        allFile: {images}
+        data: {nodes}
     }: ImageQuery = useStaticQuery(getImages);
 
-    const fluidImages = images.map((image) => image.childImageSharp.fluid);
+    const fluidImages = nodes.map((node) => node.image.fluid);
 
     const [imageIndex, setImageIndex] = React.useState(0);
 
@@ -52,11 +53,12 @@ const ImageSlider = (): ReactElement => {
     }, [imageIndex, fluidImages]);
 
     return (
+        // TODO: parameterize this component in order to make it more generic and reusable.
         <BackgroundImage
             Tag="header"
             className={styles.header}
             fluid={fluidImages[imageIndex]}
-            alt="Lavender">
+            alt="Lavender image slider">
             <div className={styles.overlay}>
                 <button
                     type="button"
